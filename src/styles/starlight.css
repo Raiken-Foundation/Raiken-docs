@@ -1,0 +1,242 @@
+/* Starlight Documentation Theme Customization */
+
+/* ===== Color Scheme ===== */
+:root {
+  --sl-color-accent-low: #1e1b4b;
+  --sl-color-accent: #6366f1;
+  --sl-color-accent-high: #a5b4fc;
+  --sl-color-white: #ffffff;
+  --sl-color-gray-1: #e5e7eb;
+  --sl-color-gray-2: #c9cdd3;
+  --sl-color-gray-3: #8b8f96;
+  --sl-color-gray-4: #545861;
+  --sl-color-gray-5: #353841;
+  --sl-color-gray-6: #24272e;
+  --sl-color-black: #16161f;
+  --sl-color-bg: #0f0f17;
+  --sl-color-bg-nav: #16161f;
+  --sl-color-bg-sidebar: #0f0f17;
+  --sl-color-hairline-light: rgba(255, 255, 255, 0.08);
+  --sl-color-hairline: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='light'] {
+  --sl-color-accent-low: #e0e7ff;
+  --sl-color-accent: #4f46e5;
+  --sl-color-accent-high: #312e81;
+  --sl-color-white: #16161f;
+  --sl-color-gray-1: #24272e;
+  --sl-color-gray-2: #353841;
+  --sl-color-gray-3: #545861;
+  --sl-color-gray-4: #8b8f96;
+  --sl-color-gray-5: #c9cdd3;
+  --sl-color-gray-6: #e5e7eb;
+  --sl-color-black: #ffffff;
+  --sl-color-bg: #ffffff;
+  --sl-color-bg-nav: #f8fafc;
+  --sl-color-bg-sidebar: #ffffff;
+}
+
+/* ===== Typography ===== */
+:root {
+  --sl-font: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --sl-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* ===== Header Navigation ===== */
+header.header {
+  background: var(--sl-color-bg-nav);
+  border-bottom: 1px solid var(--sl-color-hairline);
+}
+
+/* ===== Sidebar Fixes ===== */
+.sidebar-content {
+  padding-top: 1rem;
+}
+
+/* Fix sidebar group styling */
+nav.sidebar ul li {
+  margin: 0;
+}
+
+/* Sidebar group summary (section headers) */
+nav.sidebar details > summary,
+.sidebar details > summary,
+starlight-menu-button + nav details > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+  padding: 0.5rem 0;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--sl-color-white) !important;
+  cursor: pointer;
+  list-style: none;
+}
+
+/* Ensure the label text inside summary is readable */
+nav.sidebar details > summary span,
+nav.sidebar details > summary .large,
+.sidebar details > summary span,
+.sidebar summary span {
+  color: var(--sl-color-white) !important;
+}
+
+/* When a section contains the active page - highlight the section title */
+nav.sidebar details:has(a[aria-current='page']) > summary,
+nav.sidebar details:has(a[aria-current='page']) > summary span,
+.sidebar details:has(a[aria-current='page']) > summary,
+.sidebar details:has(a[aria-current='page']) > summary span {
+  color: var(--sl-color-accent) !important;
+}
+
+nav.sidebar details > summary::-webkit-details-marker,
+.sidebar details > summary::-webkit-details-marker {
+  display: none;
+}
+
+nav.sidebar details > summary::marker,
+.sidebar details > summary::marker {
+  display: none;
+  content: '';
+}
+
+/* Hide Starlight's default caret icons */
+nav.sidebar details > summary svg,
+nav.sidebar summary svg.caret,
+nav.sidebar summary .caret,
+.sidebar details > summary svg,
+starlight-menu-button + nav summary svg {
+  display: none !important;
+}
+
+/* Custom caret icon - placed right before the text */
+nav.sidebar details > summary::before,
+.sidebar details > summary::before {
+  content: '';
+  width: 0.75rem;
+  height: 0.75rem;
+  flex-shrink: 0;
+  margin-right: 0.125rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2.5' d='M9 5l7 7-7 7'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.15s ease;
+}
+
+/* Highlight caret when section contains active page */
+nav.sidebar details:has(a[aria-current='page']) > summary::before,
+.sidebar details:has(a[aria-current='page']) > summary::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236366f1'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2.5' d='M9 5l7 7-7 7'/%3E%3C/svg%3E");
+}
+
+nav.sidebar details[open] > summary::before,
+.sidebar details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+/* Sidebar links */
+nav.sidebar a,
+.sidebar a {
+  display: block;
+  padding: 0.375rem 0 0.375rem 1.25rem;
+  color: var(--sl-color-gray-3);
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+nav.sidebar a:hover,
+.sidebar a:hover {
+  color: var(--sl-color-white);
+}
+
+nav.sidebar a[aria-current='page'],
+.sidebar a[aria-current='page'] {
+  color: var(--sl-color-accent) !important;
+  font-weight: 500;
+}
+
+/* Sidebar group spacing */
+nav.sidebar > ul > li,
+.sidebar > ul > li {
+  margin-bottom: 1rem;
+}
+
+nav.sidebar details ul,
+.sidebar details ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ===== Content Area ===== */
+.content-panel {
+  background: var(--sl-color-bg);
+}
+
+main.main-frame {
+  padding-top: 1.5rem;
+}
+
+/* ===== Right Sidebar (TOC) ===== */
+.right-sidebar {
+  border-left: 1px solid var(--sl-color-hairline);
+}
+
+.right-sidebar-panel h2 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--sl-color-gray-4);
+}
+
+/* ===== Links ===== */
+.sl-markdown-content a {
+  color: var(--sl-color-accent-high);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.sl-markdown-content a:hover {
+  color: var(--sl-color-accent);
+}
+
+/* ===== Code Blocks ===== */
+.expressive-code {
+  margin: 1.5rem 0;
+}
+
+.expressive-code pre {
+  border: 1px solid var(--sl-color-hairline) !important;
+}
+
+/* ===== Callouts/Asides ===== */
+.starlight-aside {
+  border-radius: 0.5rem;
+  border-left-width: 3px;
+}
+
+/* ===== Mobile Menu ===== */
+@media (max-width: 72rem) {
+  .mobile-menu-toggle {
+    color: var(--sl-color-white);
+  }
+}
+
+/* ===== Search ===== */
+site-search button {
+  border: 1px solid var(--sl-color-hairline);
+  border-radius: 0.5rem;
+}
+
+/* ===== Social Icons in Header ===== */
+.social-icons a {
+  color: var(--sl-color-gray-3);
+  transition: color 0.15s ease;
+}
+
+.social-icons a:hover {
+  color: var(--sl-color-white);
+}

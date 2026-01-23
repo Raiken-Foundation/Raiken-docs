@@ -1,0 +1,146 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+---
+
+<MarketingLayout title="Documentation - Raiken">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center mb-12">
+            <h1 class="text-3xl font-semibold text-white mb-3">Documentation</h1>
+            <p class="text-gray-400 text-sm max-w-lg mx-auto">Learn how to install Raiken, configure it for your project, and generate your first AI-powered Playwright tests.</p>
+        </div>
+
+        <!-- Quick Start -->
+        <div class="mb-12">
+            <a href="/getting-started" class="block p-6 rounded-lg bg-gradient-to-r from-brand-600/20 to-brand-500/10 border border-brand-500/30 hover:border-brand-500/50 transition-colors group">
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-lg bg-brand-500/20 flex items-center justify-center flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-lg font-medium text-white mb-1 group-hover:text-brand-400 transition-colors">Quick Start</h2>
+                        <p class="text-gray-400 text-sm">Go from zero to your first generated test in under 5 minutes. We'll walk you through installation, configuration, and running your first prompt.</p>
+                        <div class="mt-3">
+                            <code class="text-xs text-gray-500 bg-dark-900 px-2 py-1 rounded font-mono">npx raiken init && raiken start</code>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 group-hover:text-brand-400 transition-colors flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+
+        <!-- Core Topics Grid -->
+        <div class="grid md:grid-cols-2 gap-4 mb-12">
+            <!-- Core Concepts -->
+            <a href="/core-concepts" class="block p-5 rounded-lg bg-dark-800/50 border border-white/5 hover:border-white/10 transition-colors group">
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 rounded-md bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-medium text-white mb-1 group-hover:text-purple-400 transition-colors">Core Concepts</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Understand the code graph, DOM capture, and orchestration that powers Raiken's test generation.</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Architecture -->
+            <a href="/architecture" class="block p-5 rounded-lg bg-dark-800/50 border border-white/5 hover:border-white/10 transition-colors group">
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 rounded-md bg-blue-500/10 flex items-center justify-center flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-medium text-white mb-1 group-hover:text-blue-400 transition-colors">Architecture</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">See how the CLI, dashboard, and core engine work together to generate and manage tests.</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- CLI Reference -->
+            <a href="/cli" class="block p-5 rounded-lg bg-dark-800/50 border border-white/5 hover:border-white/10 transition-colors group">
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 rounded-md bg-emerald-500/10 flex items-center justify-center flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-medium text-white mb-1 group-hover:text-emerald-400 transition-colors">CLI Reference</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">All available commands, flags, and environment variables for the Raiken CLI.</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Configuration -->
+            <a href="/configuration" class="block p-5 rounded-lg bg-dark-800/50 border border-white/5 hover:border-white/10 transition-colors group">
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 rounded-md bg-amber-500/10 flex items-center justify-center flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-medium text-white mb-1 group-hover:text-amber-400 transition-colors">Configuration</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Customize Raiken with raiken.config.json: AI providers, test output, browser settings, and more.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Deep Dives -->
+        <div class="mb-8">
+            <h2 class="text-lg font-medium text-white mb-4">Deep Dives</h2>
+            <div class="grid md:grid-cols-3 gap-3">
+                <a href="/dom-capture" class="block p-4 rounded-lg bg-dark-800/30 border border-white/5 hover:border-white/10 transition-colors group">
+                    <h3 class="text-sm font-medium text-white mb-1 group-hover:text-brand-400 transition-colors">DOM Capture</h3>
+                    <p class="text-gray-500 text-xs">How Raiken extracts semantic UI structure for stable selectors.</p>
+                </a>
+                <a href="/test-generation" class="block p-4 rounded-lg bg-dark-800/30 border border-white/5 hover:border-white/10 transition-colors group">
+                    <h3 class="text-sm font-medium text-white mb-1 group-hover:text-brand-400 transition-colors">Test Generation</h3>
+                    <p class="text-gray-500 text-xs">The pipeline from prompt to production-ready Playwright code.</p>
+                </a>
+                <a href="/orchestrator" class="block p-4 rounded-lg bg-dark-800/30 border border-white/5 hover:border-white/10 transition-colors group">
+                    <h3 class="text-sm font-medium text-white mb-1 group-hover:text-brand-400 transition-colors">Orchestrator</h3>
+                    <p class="text-gray-500 text-xs">The agent that coordinates tools and builds context for the AI.</p>
+                </a>
+                <a href="/code-graph" class="block p-4 rounded-lg bg-dark-800/30 border border-white/5 hover:border-white/10 transition-colors group">
+                    <h3 class="text-sm font-medium text-white mb-1 group-hover:text-brand-400 transition-colors">Code Graph</h3>
+                    <p class="text-gray-500 text-xs">How your project is indexed to provide structural context.</p>
+                </a>
+                <a href="/dashboard" class="block p-4 rounded-lg bg-dark-800/30 border border-white/5 hover:border-white/10 transition-colors group">
+                    <h3 class="text-sm font-medium text-white mb-1 group-hover:text-brand-400 transition-colors">Dashboard</h3>
+                    <p class="text-gray-500 text-xs">Navigate the web UI for test generation and management.</p>
+                </a>
+                <a href="/examples" class="block p-4 rounded-lg bg-dark-800/30 border border-white/5 hover:border-white/10 transition-colors group">
+                    <h3 class="text-sm font-medium text-white mb-1 group-hover:text-brand-400 transition-colors">Examples</h3>
+                    <p class="text-gray-500 text-xs">Real prompts and the tests they produce.</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Resources Row -->
+        <div class="grid md:grid-cols-3 gap-3">
+            <a href="/troubleshooting" class="block p-4 rounded-lg bg-dark-800/30 border border-white/5 hover:border-white/10 transition-colors group">
+                <h3 class="text-sm font-medium text-white mb-1 group-hover:text-brand-400 transition-colors">Troubleshooting</h3>
+                <p class="text-gray-500 text-xs">Solutions for common issues and error messages.</p>
+            </a>
+            <a href="/faq" class="block p-4 rounded-lg bg-dark-800/30 border border-white/5 hover:border-white/10 transition-colors group">
+                <h3 class="text-sm font-medium text-white mb-1 group-hover:text-brand-400 transition-colors">FAQ</h3>
+                <p class="text-gray-500 text-xs">Answers to frequently asked questions.</p>
+            </a>
+            <a href="/roadmap" class="block p-4 rounded-lg bg-dark-800/30 border border-white/5 hover:border-white/10 transition-colors group">
+                <h3 class="text-sm font-medium text-white mb-1 group-hover:text-brand-400 transition-colors">Roadmap</h3>
+                <p class="text-gray-500 text-xs">What we're building next and how to provide feedback.</p>
+            </a>
+        </div>
+    </div>
+</MarketingLayout>

@@ -1,0 +1,156 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+---
+
+<MarketingLayout title="Features - Raiken">
+    <!-- Hero -->
+    <section class="py-16 border-b border-white/5">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-3xl md:text-4xl font-semibold text-white mb-4">Why teams choose Raiken</h1>
+            <p class="text-gray-400 text-base max-w-2xl mx-auto leading-relaxed">
+                If your team spends hours on flaky E2E tests or struggles to keep automation aligned with product changes, Raiken gives you faster test creation, lower maintenance, and a clearer path to team-wide QA collaboration—without changing your existing stack.
+            </p>
+        </div>
+    </section>
+
+    <!-- Benefits Grid -->
+    <section class="py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Benefit 1 -->
+                <div class="p-6 rounded-lg bg-dark-800/50 border border-white/5">
+                    <div class="w-10 h-10 bg-brand-500/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-medium text-white mb-2">Lower QA cost per release</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Raiken cuts test creation and maintenance time by automating the heavy lifting. Teams spend less time writing and fixing tests, and more time shipping.
+                    </p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="p-6 rounded-lg bg-dark-800/50 border border-white/5">
+                    <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-medium text-white mb-2">More reliable automation, fewer flaky tests</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Raiken captures real UI context and generates stable selectors, reducing brittle tests and false failures that slow down shipping.
+                    </p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="p-6 rounded-lg bg-dark-800/50 border border-white/5">
+                    <div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-medium text-white mb-2">Faster onboarding for new engineers</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Instead of digging through brittle test code, new team members can generate and understand tests using natural language on the dashboard.
+                    </p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="p-6 rounded-lg bg-dark-800/50 border border-white/5">
+                    <div class="w-10 h-10 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-medium text-white mb-2">Product changes stop breaking QA</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Planned business-context integration (Jira + GitHub) aligns tests with current requirements, not outdated assumptions. This reduces "false bug" noise and accelerates releases.
+                    </p>
+                    <span class="inline-block mt-3 text-xs font-medium text-brand-400 bg-brand-500/10 px-2 py-0.5 rounded">Coming soon</span>
+                </div>
+
+                <!-- Benefit 5 -->
+                <div class="p-6 rounded-lg bg-dark-800/50 border border-white/5">
+                    <div class="w-10 h-10 bg-rose-500/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-medium text-white mb-2">Team-wide collaboration</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        The collaborative test graph will let teams build, visualize, and share test flows together—making QA a shared asset, not siloed scripts.
+                    </p>
+                    <span class="inline-block mt-3 text-xs font-medium text-brand-400 bg-brand-500/10 px-2 py-0.5 rounded">Coming soon</span>
+                </div>
+
+                <!-- Benefit 6 -->
+                <div class="p-6 rounded-lg bg-dark-800/50 border border-white/5">
+                    <div class="w-10 h-10 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-medium text-white mb-2">Scales with your organization</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        From single devs to larger teams, Raiken's local-first workflow, AI automation, and upcoming collaboration features make it a practical path from "manual testing" to "automated QA at scale."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Capabilities -->
+    <section class="py-16 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <p class="text-brand-400 text-xs font-medium uppercase tracking-wider mb-2">Under the hood</p>
+                <h2 class="text-2xl font-semibold text-white mb-3">How Raiken works</h2>
+                <p class="text-gray-400 text-sm max-w-lg mx-auto">A CLI-first tool that indexes your project and captures your UI to generate tests grounded in reality.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="p-5 rounded-lg bg-dark-800/30 border border-white/5">
+                    <h3 class="text-sm font-medium text-white mb-2">Code Graph Indexing</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">Scans your project structure—components, routes, dependencies—and stores it locally for context-aware generation.</p>
+                </div>
+                <div class="p-5 rounded-lg bg-dark-800/30 border border-white/5">
+                    <h3 class="text-sm font-medium text-white mb-2">DOM Capture</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">Uses Playwright to snapshot interactive elements, ensuring generated tests use real, stable selectors from your actual UI.</p>
+                </div>
+                <div class="p-5 rounded-lg bg-dark-800/30 border border-white/5">
+                    <h3 class="text-sm font-medium text-white mb-2">AI Test Generation</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">Describe tests in plain English. Raiken streams production-ready Playwright code directly to your dashboard.</p>
+                </div>
+                <div class="p-5 rounded-lg bg-dark-800/30 border border-white/5">
+                    <h3 class="text-sm font-medium text-white mb-2">Project Detection</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">Automatically identifies your framework, test runner, package manager, and entry points during initialization.</p>
+                </div>
+                <div class="p-5 rounded-lg bg-dark-800/30 border border-white/5">
+                    <h3 class="text-sm font-medium text-white mb-2">Local Dashboard</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">A browser UI served by the CLI for writing prompts, viewing generated tests, and managing your test suite.</p>
+                </div>
+                <div class="p-5 rounded-lg bg-dark-800/30 border border-white/5">
+                    <h3 class="text-sm font-medium text-white mb-2">Config-Driven Setup</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">All settings in one <code class="text-xs bg-dark-900 px-1 rounded">raiken.config.json</code> file—browser settings, AI provider, output paths.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl font-semibold text-white mb-3">See it in action</h2>
+            <p class="text-gray-400 text-sm mb-6 max-w-md mx-auto">Install Raiken, point it at your project, and generate your first test in minutes.</p>
+            <div class="flex justify-center gap-3">
+                <a href="/getting-started" class="inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-500 text-white text-sm font-medium rounded-md transition-colors">
+                    Get started
+                </a>
+                <a href="/docs" class="inline-flex items-center px-4 py-2 bg-transparent hover:bg-white/5 text-gray-300 text-sm font-medium rounded-md border border-white/10 transition-colors">
+                    Read the docs
+                </a>
+            </div>
+        </div>
+    </section>
+</MarketingLayout>

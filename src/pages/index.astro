@@ -1,0 +1,270 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+---
+
+<MarketingLayout title="Raiken - AI-Powered Test Generation for Playwright">
+    <!-- Hero Section -->
+    <section class="relative pt-16 pb-24 overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-400 text-xs font-medium mb-6">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+                </span>
+                Now in public beta
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white mb-5">
+                Stop writing tests.<br class="hidden sm:block" />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-600">Start describing them.</span>
+            </h1>
+            <p class="max-w-xl mx-auto text-base text-gray-400 mb-8 leading-relaxed">
+                Raiken generates production-ready Playwright tests from plain English. It indexes your codebase and captures your UI to create tests grounded in how your app actually works.
+            </p>
+            <div class="flex justify-center gap-3">
+                <a href="/getting-started" class="inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-500 text-white text-sm font-medium rounded-md transition-colors">
+                    Get started free
+                </a>
+                <a href="https://github.com/raiken-dev/raiken" class="inline-flex items-center gap-2 px-4 py-2 bg-transparent hover:bg-white/5 text-gray-300 text-sm font-medium rounded-md border border-white/10 transition-colors">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                    Star on GitHub
+                </a>
+            </div>
+        </div>
+        
+        <!-- Background Glow -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-5xl pointer-events-none">
+            <div class="absolute top-10 left-1/4 w-72 h-72 bg-brand-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute top-20 right-1/4 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
+        </div>
+    </section>
+
+    <!-- Code Demo Section -->
+    <section class="py-16">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-xs text-gray-500 uppercase tracking-wider mb-6">One config file. Zero boilerplate.</p>
+            <div class="rounded-lg border border-white/10 overflow-hidden bg-dark-900/50">
+                <div class="flex items-center px-4 py-2.5 border-b border-white/10 bg-dark-800/50">
+                    <div class="flex space-x-1.5">
+                        <div class="w-2.5 h-2.5 rounded-full bg-white/20"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-white/20"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-white/20"></div>
+                    </div>
+                    <div class="ml-4 text-xs text-gray-500 font-mono">raiken.config.json</div>
+                </div>
+                <div class="p-5 overflow-x-auto">
+                    <pre class="text-sm font-mono leading-relaxed"><code class="language-json"><span class="text-gray-500">{</span>
+  <span class="text-brand-400">"projectType"</span><span class="text-gray-500">:</span> <span class="text-emerald-400">"nextjs"</span><span class="text-gray-500">,</span>
+  <span class="text-brand-400">"testFramework"</span><span class="text-gray-500">:</span> <span class="text-emerald-400">"playwright"</span><span class="text-gray-500">,</span>
+  <span class="text-brand-400">"ai"</span><span class="text-gray-500">: {</span>
+    <span class="text-brand-400">"provider"</span><span class="text-gray-500">:</span> <span class="text-emerald-400">"openrouter"</span><span class="text-gray-500">,</span>
+    <span class="text-brand-400">"model"</span><span class="text-gray-500">:</span> <span class="text-emerald-400">"anthropic/claude-3.5-sonnet"</span>
+  <span class="text-gray-500">}</span>
+<span class="text-gray-500">}</span></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section id="features" class="py-16 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl font-semibold text-white mb-3">What Raiken does today</h2>
+                <p class="text-gray-400 text-sm max-w-lg mx-auto">A local-first CLI and dashboard that understands your project before generating a single test.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Feature 1: Code Graph -->
+                <div class="p-5 rounded-lg bg-dark-800/50 border border-white/5 hover:border-white/10 transition-colors">
+                    <div class="flex items-start gap-4">
+                        <div class="w-9 h-9 bg-brand-500/10 rounded-md flex items-center justify-center flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-brand-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-medium text-white mb-1">Code Graph Indexing</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">
+                                Raiken scans your project and builds a structured graph of components, routes, and dependencies—stored locally in <code class="text-xs bg-dark-900 px-1 rounded">.raiken/raiken.db</code>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Project Detection -->
+                <div class="p-5 rounded-lg bg-dark-800/50 border border-white/5 hover:border-white/10 transition-colors">
+                    <div class="flex items-start gap-4">
+                        <div class="w-9 h-9 bg-purple-500/10 rounded-md flex items-center justify-center flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-medium text-white mb-1">Smart Project Detection</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">
+                                Automatically identifies your framework (Next.js, React, Vue), test framework (Playwright, Vitest), package manager, and entry points.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 3: DOM Capture -->
+                <div class="p-5 rounded-lg bg-dark-800/50 border border-white/5 hover:border-white/10 transition-colors">
+                    <div class="flex items-start gap-4">
+                        <div class="w-9 h-9 bg-emerald-500/10 rounded-md flex items-center justify-center flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-medium text-white mb-1">Live DOM Capture</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">
+                                Uses Playwright to capture a semantic snapshot of interactive elements on your page—buttons, inputs, links—so tests use real selectors.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 4: Test Generation -->
+                <div class="p-5 rounded-lg bg-dark-800/50 border border-white/5 hover:border-white/10 transition-colors">
+                    <div class="flex items-start gap-4">
+                        <div class="w-9 h-9 bg-amber-500/10 rounded-md flex items-center justify-center flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-medium text-white mb-1">Streaming Test Output</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">
+                                Describe what you want to test in plain English. Raiken streams AI-generated Playwright code directly to the dashboard as it's written.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 5: Local Dashboard -->
+                <div class="p-5 rounded-lg bg-dark-800/50 border border-white/5 hover:border-white/10 transition-colors">
+                    <div class="flex items-start gap-4">
+                        <div class="w-9 h-9 bg-rose-500/10 rounded-md flex items-center justify-center flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-medium text-white mb-1">Local Dashboard UI</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">
+                                A browser-based interface served by the CLI at <code class="text-xs bg-dark-900 px-1 rounded">localhost:7101</code> for writing prompts, viewing results, and managing tests.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 6: Local-First -->
+                <div class="p-5 rounded-lg bg-dark-800/50 border border-white/5 hover:border-white/10 transition-colors">
+                    <div class="flex items-start gap-4">
+                        <div class="w-9 h-9 bg-cyan-500/10 rounded-md flex items-center justify-center flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-medium text-white mb-1">Privacy by Default</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">
+                                All project context stays in your local <code class="text-xs bg-dark-900 px-1 rounded">.raiken/</code> directory. Only minimal prompts are sent to the AI provider you configure.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="py-16 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl font-semibold text-white mb-3">From install to first test in under a minute</h2>
+                <p class="text-gray-400 text-sm">No complex setup. No test recorder. Just describe what you want to test.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="w-8 h-8 rounded-full bg-brand-500/20 text-brand-400 text-sm font-medium flex items-center justify-center mx-auto mb-4">1</div>
+                    <h3 class="text-sm font-medium text-white mb-2">Initialize</h3>
+                    <code class="text-xs text-gray-500 bg-dark-800 px-2 py-1 rounded">raiken init</code>
+                    <p class="text-xs text-gray-500 mt-2">Sets up config, test directories, and scripts</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-8 h-8 rounded-full bg-brand-500/20 text-brand-400 text-sm font-medium flex items-center justify-center mx-auto mb-4">2</div>
+                    <h3 class="text-sm font-medium text-white mb-2">Launch</h3>
+                    <code class="text-xs text-gray-500 bg-dark-800 px-2 py-1 rounded">raiken start</code>
+                    <p class="text-xs text-gray-500 mt-2">Opens the dashboard at localhost:7101</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-8 h-8 rounded-full bg-brand-500/20 text-brand-400 text-sm font-medium flex items-center justify-center mx-auto mb-4">3</div>
+                    <h3 class="text-sm font-medium text-white mb-2">Describe</h3>
+                    <p class="text-xs text-gray-500 mt-1">"Test that a user can add an item to their cart"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon -->
+    <section class="py-16 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <p class="text-brand-400 text-xs font-medium uppercase tracking-wider mb-2">Roadmap</p>
+                <h2 class="text-2xl font-semibold text-white mb-3">Coming soon</h2>
+                <p class="text-gray-400 text-sm max-w-lg mx-auto">We're actively building these features. Want early access or to shape the roadmap? Get in touch.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="p-5 rounded-lg bg-dark-800/30 border border-dashed border-white/10">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-xs font-medium text-brand-400 bg-brand-500/10 px-2 py-0.5 rounded">Planned</span>
+                    </div>
+                    <h3 class="text-sm font-medium text-white mb-1">Multi-Page DOM Capture</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">AI-driven navigation loop with human-in-the-loop guidance to capture flows that span multiple pages.</p>
+                </div>
+                <div class="p-5 rounded-lg bg-dark-800/30 border border-dashed border-white/10">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-xs font-medium text-brand-400 bg-brand-500/10 px-2 py-0.5 rounded">Planned</span>
+                    </div>
+                    <h3 class="text-sm font-medium text-white mb-1">Business Context Integration</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">Connect Jira tickets and GitHub PRs to automatically update tests when requirements change.</p>
+                </div>
+                <div class="p-5 rounded-lg bg-dark-800/30 border border-dashed border-white/10">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-xs font-medium text-brand-400 bg-brand-500/10 px-2 py-0.5 rounded">Planned</span>
+                    </div>
+                    <h3 class="text-sm font-medium text-white mb-1">Collaborative Test Graph</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">A shared visual map of test flows with real-time sync across your team.</p>
+                </div>
+                <div class="p-5 rounded-lg bg-dark-800/30 border border-dashed border-white/10">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-xs font-medium text-brand-400 bg-brand-500/10 px-2 py-0.5 rounded">Planned</span>
+                    </div>
+                    <h3 class="text-sm font-medium text-white mb-1">Auth Helper Flow</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">Guided session state capture for testing pages that require authentication.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl font-semibold text-white mb-3">Ready to try it?</h2>
+            <p class="text-gray-400 text-sm mb-6 max-w-md mx-auto">Raiken is free to use locally. Install it, point it at your project, and generate your first test in minutes.</p>
+            <div class="flex justify-center gap-3">
+                <a href="/getting-started" class="inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-500 text-white text-sm font-medium rounded-md transition-colors">
+                    Read the docs
+                </a>
+                <a href="/enterprise" class="inline-flex items-center px-4 py-2 bg-transparent hover:bg-white/5 text-gray-300 text-sm font-medium rounded-md border border-white/10 transition-colors">
+                    Talk to us
+                </a>
+            </div>
+        </div>
+    </section>
+</MarketingLayout>
