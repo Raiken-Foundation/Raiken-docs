@@ -1,0 +1,12 @@
+services:
+  raiken-docs:
+    build: .
+    container_name: raiken-docs
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    # Uncomment below if using with a reverse proxy like Traefik or Caddy
+    # labels:
+    #   - "traefik.enable=true"
+    #   - "traefik.http.routers.raiken-docs.rule=Host(`raiken.ai`)"
+    #   - "traefik.http.routers.raiken-docs.tls.certresolver=letsencrypt"

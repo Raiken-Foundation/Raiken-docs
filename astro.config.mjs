@@ -3,6 +3,7 @@ import starlight from '@astrojs/starlight';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
+  site: 'https://raiken.ai',
   integrations: [
     tailwind({
       applyBaseStyles: false,
@@ -11,9 +12,6 @@ export default defineConfig({
       title: 'Raiken',
       description: 'AI-powered test generation for Playwright',
       disable404Route: true,
-      social: {
-        github: 'https://github.com/raiken-dev/raiken',
-      },
       customCss: [
         './src/styles/starlight.css',
       ],

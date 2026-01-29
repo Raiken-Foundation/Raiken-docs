@@ -64,43 +64,14 @@ import MarketingLayout from '../layouts/MarketingLayout.astro';
             <div class="bg-dark-800/50 border border-white/5 rounded-lg p-6">
                 <h3 class="text-base font-medium text-white mb-2">Talk to our team</h3>
                 <p class="text-gray-500 text-xs mb-5">Tell us about your testing challenges and we'll show you how Raiken can help.</p>
-                <form class="space-y-4">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-medium text-gray-400 mb-1.5">First Name</label>
-                            <input type="text" class="w-full px-3 py-2 bg-dark-900 border border-white/10 rounded-md text-sm text-white focus:outline-none focus:border-brand-500 transition-colors" placeholder="Jane">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-medium text-gray-400 mb-1.5">Last Name</label>
-                            <input type="text" class="w-full px-3 py-2 bg-dark-900 border border-white/10 rounded-md text-sm text-white focus:outline-none focus:border-brand-500 transition-colors" placeholder="Doe">
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-medium text-gray-400 mb-1.5">Work Email</label>
-                        <input type="email" class="w-full px-3 py-2 bg-dark-900 border border-white/10 rounded-md text-sm text-white focus:outline-none focus:border-brand-500 transition-colors" placeholder="jane@company.com">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-medium text-gray-400 mb-1.5">Company</label>
-                        <input type="text" class="w-full px-3 py-2 bg-dark-900 border border-white/10 rounded-md text-sm text-white focus:outline-none focus:border-brand-500 transition-colors" placeholder="Acme Inc.">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-medium text-gray-400 mb-1.5">Team Size</label>
-                        <select class="w-full px-3 py-2 bg-dark-900 border border-white/10 rounded-md text-sm text-white focus:outline-none focus:border-brand-500 transition-colors appearance-none">
-                            <option>1-10 engineers</option>
-                            <option>11-50 engineers</option>
-                            <option>51-200 engineers</option>
-                            <option>200+ engineers</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-medium text-gray-400 mb-1.5">How can we help?</label>
-                        <textarea rows="3" class="w-full px-3 py-2 bg-dark-900 border border-white/10 rounded-md text-sm text-white focus:outline-none focus:border-brand-500 transition-colors" placeholder="E.g., We're looking to improve test coverage for our React app..."></textarea>
-                    </div>
-                    <button type="button" class="w-full py-2.5 bg-brand-600 hover:bg-brand-500 text-white text-sm font-medium rounded-md transition-colors">
-                        Request a demo
-                    </button>
-                    <p class="text-xs text-gray-600 text-center">We typically respond within one business day.</p>
-                </form>
+                
+                <a href="mailto:collinslord50@gmail.com?subject=Enterprise%20Demo%20Request%20-%20Raiken&body=Hi%20Raiken%20team%2C%0A%0AI%27m%20interested%20in%20learning%20more%20about%20Raiken%20for%20my%20team.%0A%0ACompany%3A%20%5BYour%20company%20name%5D%0ATeam%20size%3A%20%5BNumber%20of%20engineers%5D%0A%0AOur%20testing%20challenges%3A%0A%5BDescribe%20your%20current%20testing%20setup%20and%20pain%20points%5D%0A%0AThanks%2C%0A%5BYour%20name%5D%0A%5BYour%20email%5D" 
+                   class="flex items-center justify-center gap-2 w-full py-2.5 bg-brand-600 hover:bg-brand-500 text-white text-sm font-medium rounded-md transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    Request a demo
+                </a>
+                
+                <p class="text-xs text-gray-600 text-center mt-4">We typically respond within one business day.</p>
             </div>
         </div>
     </div>

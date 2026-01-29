@@ -4,7 +4,7 @@ import MarketingLayout from '../layouts/MarketingLayout.astro';
 
 <MarketingLayout title="Contact - Raiken">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
             <!-- Left Column -->
             <div>
                 <h1 class="text-3xl font-semibold text-white mb-4">Get in touch</h1>
@@ -30,54 +30,23 @@ import MarketingLayout from '../layouts/MarketingLayout.astro';
                 <div class="mt-8 pt-8 border-t border-white/5">
                     <h3 class="text-sm font-medium text-white mb-4">Find us elsewhere</h3>
                     <div class="flex gap-4">
-                        <a href="https://github.com/raiken-dev/raiken" class="text-gray-500 hover:text-white transition-colors">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
-                        </a>
-                        <a href="#" class="text-gray-500 hover:text-white transition-colors">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+                        <a href="https://www.npmjs.com/package/raiken" class="text-gray-500 hover:text-white transition-colors" title="npm">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331zM10.665 10H12v2.667h-1.335V10z"/></svg>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Contact Form -->
+            <!-- Contact CTA -->
             <div class="bg-dark-800/50 border border-white/5 rounded-lg p-6">
-                <h3 class="text-base font-medium text-white mb-5">Send us a message</h3>
-                <form class="space-y-4">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-medium text-gray-400 mb-1.5">First Name</label>
-                            <input type="text" class="w-full px-3 py-2 bg-dark-900 border border-white/10 rounded-md text-sm text-white focus:outline-none focus:border-brand-500 transition-colors" placeholder="Jane">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-medium text-gray-400 mb-1.5">Last Name</label>
-                            <input type="text" class="w-full px-3 py-2 bg-dark-900 border border-white/10 rounded-md text-sm text-white focus:outline-none focus:border-brand-500 transition-colors" placeholder="Doe">
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-medium text-gray-400 mb-1.5">Email</label>
-                        <input type="email" class="w-full px-3 py-2 bg-dark-900 border border-white/10 rounded-md text-sm text-white focus:outline-none focus:border-brand-500 transition-colors" placeholder="jane@example.com">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-medium text-gray-400 mb-1.5">Subject</label>
-                        <select class="w-full px-3 py-2 bg-dark-900 border border-white/10 rounded-md text-sm text-white focus:outline-none focus:border-brand-500 transition-colors appearance-none">
-                            <option>General question</option>
-                            <option>Feedback</option>
-                            <option>Feature request</option>
-                            <option>Bug report</option>
-                            <option>Partnership</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-medium text-gray-400 mb-1.5">Message</label>
-                        <textarea rows="4" class="w-full px-3 py-2 bg-dark-900 border border-white/10 rounded-md text-sm text-white focus:outline-none focus:border-brand-500 transition-colors" placeholder="How can we help?"></textarea>
-                    </div>
-                    <button type="button" class="w-full py-2.5 bg-brand-600 hover:bg-brand-500 text-white text-sm font-medium rounded-md transition-colors">
-                        Send message
-                    </button>
-                    <p class="text-xs text-gray-600 text-center">We typically respond within 1-2 business days.</p>
-                </form>
+                <h3 class="text-base font-medium text-white mb-3">Send us a message</h3>
+                <p class="text-gray-500 text-sm mb-6">Click below to open your email client with a pre-filled message. We typically respond within 1-2 business days.</p>
+                
+                <a href="mailto:collinslord50@gmail.com?subject=Raiken%20Inquiry&body=Hi%20Raiken%20team%2C%0A%0AI%20have%20a%20question%20about%3A%0A%0A%5BPlease%20describe%20your%20question%20or%20feedback%20here%5D%0A%0AThanks%2C%0A%5BYour%20name%5D" 
+                   class="flex items-center justify-center gap-2 w-full py-2.5 bg-brand-600 hover:bg-brand-500 text-white text-sm font-medium rounded-md transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    Send an email
+                </a>
             </div>
         </div>
     </div>

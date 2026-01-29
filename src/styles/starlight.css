@@ -65,13 +65,21 @@ nav.sidebar details > summary,
 starlight-menu-button + nav details > summary {
   display: flex;
   align-items: center;
-  gap: 0.125rem;
+  justify-content: flex-start !important;
+  gap: 0.25rem;
   padding: 0.5rem 0;
   font-weight: 600;
   font-size: 0.875rem;
   color: var(--sl-color-white) !important;
   cursor: pointer;
   list-style: none;
+}
+
+/* Force Starlight summary inner elements to not spread apart */
+nav.sidebar details > summary > *,
+.sidebar details > summary > * {
+  flex-grow: 0 !important;
+  flex-shrink: 0 !important;
 }
 
 /* Ensure the label text inside summary is readable */
@@ -108,6 +116,35 @@ nav.sidebar summary .caret,
 .sidebar details > summary svg,
 starlight-menu-button + nav summary svg {
   display: none !important;
+}
+
+/* Override Starlight's group-label styling */
+.sidebar .group-label,
+nav.sidebar .group-label,
+.sidebar details summary .group-label {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.25rem !important;
+  width: auto !important;
+  justify-content: flex-start !important;
+}
+
+/* Ensure the top-level sidebar list doesn't use space-between */
+.sidebar > ul,
+nav.sidebar > ul,
+.sidebar-content > ul {
+  width: 100%;
+}
+
+.sidebar li,
+nav.sidebar li {
+  display: block;
+}
+
+/* Target Starlight's specific summary structure */
+[data-scope="sidebar"] details > summary,
+.sidebar-pane details > summary {
+  justify-content: flex-start !important;
 }
 
 /* Custom caret icon - placed right before the text */
