@@ -98,6 +98,13 @@ raiken start -p 8080
 🚀 Raiken UI running at http://localhost:7101
 ```
 
+## API surface (local)
+
+The CLI exposes a small local API used by the dashboard:
+
+- `POST /api/generate-test` — SSE stream for exploration and test generation output
+- `POST /api/trpc/*` — tRPC router for dashboard actions
+
 ## Environment variables
 
 Raiken reads `.env` from your project root.

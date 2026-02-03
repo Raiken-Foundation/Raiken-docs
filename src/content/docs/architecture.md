@@ -3,7 +3,7 @@ title: Architecture
 description: How the CLI, dashboard, and core modules fit together.
 ---
 
-Raiken is built as a monorepo with a clear separation between the CLI,
+Raiken is built as an Nx monorepo with a clear separation between the CLI,
 dashboard, and core logic.
 
 ![System architecture diagram](/placeholder-diagram.svg)
@@ -12,37 +12,27 @@ dashboard, and core logic.
 
 | Module | Location | Responsibility |
 | --- | --- | --- |
-| CLI | `apps/cli` | Runs the server, detects project info, starts the agent |
-| Dashboard | `apps/dashboard` | UI for prompts, results, and test management |
-| Core | `libs/core` | Code graph, DOM capture, test generation, orchestration |
-| Shared | `libs/shared` | tRPC router, shared types, config |
+| CLI | `apps/cli` | Fastify server, SSE output, tRPC API, serves dashboard in production |
+| Dashboard | `apps/dashboard` | React + Vite UI for prompts, results, and approvals |
+| Core | `libs/core` | LangGraph agent, tools, browser session, DOM capture, DB, testing |
+| Shared | `libs/shared` | tRPC router and shared types |
 
 ## Data flow
 
-1. Developer runs the CLI.
-2. CLI starts a local Fastify server.
-3. Dashboard connects via tRPC.
-4. Core builds a code graph and stores it in `.raiken/raiken.db`.
-5. The agent captures DOM context and generates tests.
+1. User submits a prompt in the dashboard.
+2. CLI receives the prompt and streams agent output via SSE.
+3. Orchestrator runs the LangGraph agent with tool calls.
+4. Core tools execute browser actions, file operations, and test runs.
+5. Results are persisted locally in `.raiken/raiken.db`.
 
-## Example request timeline
-
-```text title="Timeline"
-T+0s  CLI started and project loaded
-T+2s  Code graph refreshed
-T+4s  DOM capture snapshot received
-T+6s  Test generated and streamed to UI
-```
-
-## Ports
-
-- CLI server: `http://localhost:7101`
-- Dashboard (dev): `http://localhost:4200`
-
-## Local state
+## Local persistence
 
 Raiken keeps local state under `.raiken/` so it can:
 
-- track project structure over time
-- cache embeddings and analysis
-- store entry points and file metadata
+- store the code graph, keywords, embeddings, and memory
+- cache analysis for faster follow-up prompts
+- track test run history and outcomes
+
+## Ports
+
+- CLI server + dashboard: `http://localhost:7101`

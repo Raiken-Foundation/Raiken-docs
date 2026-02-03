@@ -3,7 +3,8 @@ title: Test Generation
 description: How Raiken combines context to generate Playwright tests.
 ---
 
-Raiken generates tests by combining your intent with live project context.
+Raiken generates tests by combining your intent with live project context. Tests are
+created only when explicitly requested — exploration runs do not write tests.
 
 ## How it works
 
@@ -58,6 +59,13 @@ Generated tests are saved to the directory specified in your config:
 ```
 
 By default, this is `tests/` or `e2e/` depending on your framework.
+
+## Human-in-the-loop approvals
+
+Raiken defaults to safety gates for writing and running tests:
+
+- **Save test** requires approval unless autonomy is enabled
+- **Run test** requires approval unless autonomy is enabled
 
 ## Selector strategy
 

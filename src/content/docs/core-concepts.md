@@ -50,6 +50,14 @@ Raiken stores local project state on disk so it can:
 - reuse prior context
 - improve test generation accuracy over time
 
+This local state includes a SQLite database (`.raiken/raiken.db`) with code graph data,
+keywords, embeddings, and agent memory.
+
+## Exploration-first default
+
+Raiken explores and captures context by default. Tests are generated only when you
+explicitly ask for them.
+
 ## Test generation
 
 Prompts are grounded by:

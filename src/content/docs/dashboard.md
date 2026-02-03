@@ -3,7 +3,7 @@ title: Dashboard
 description: The web interface for generating and managing tests.
 ---
 
-The Raiken dashboard is a browser-based interface for generating tests and managing your test suite.
+The Raiken dashboard is a browser-based interface for exploration, test generation, and managing your test suite.
 
 :::tip[Quick Access]
 After running `raiken start`, open **http://localhost:7101** in your browser.
@@ -11,17 +11,17 @@ After running `raiken start`, open **http://localhost:7101** in your browser.
 
 ## Overview
 
-The dashboard connects to the CLI server via tRPC, enabling real-time streaming of generated tests.
+The dashboard connects to the CLI server via tRPC and streams agent output in real time. Exploration runs are supported, and tests are generated only when explicitly requested.
 
 ## Key features
 
 ### Prompt composer
 
-Write natural language descriptions of the tests you want to generate:
+Write natural language descriptions of what you want Raiken to do:
 
 ```text
-Test that a user can log in with valid credentials
-and see their dashboard with a welcome message.
+Explore the login flow and capture DOM context.
+Generate a test that validates the dashboard welcome message.
 ```
 
 The prompt composer supports:
@@ -94,7 +94,7 @@ The test streams to the UI. Review it as it's generated.
 
 ### 4. Save or refine
 
-If the test looks good, save it. If not, add a follow-up prompt:
+If the test looks good, save it. Save and run actions require approval unless autonomy is enabled. If it needs work, add a follow-up prompt:
 
 ```text
 Add a test for the edge case where decrement is clicked

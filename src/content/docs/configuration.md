@@ -5,6 +5,15 @@ description: Configure Raiken with raiken.config.json and environment variables.
 
 Raiken is configured with `raiken.config.json`. This file is created by `raiken init` and can be edited at any time.
 
+## Configuration categories
+
+Raiken supports high-level configuration for:
+
+- AI provider and model selection
+- Browser settings (engine, headless, timeouts, retries)
+- Feature flags (screenshots, video, tracing, network capture)
+- Autonomy controls for save/run behavior (when enabled)
+
 ## Full configuration
 
 ```json title="raiken.config.json"

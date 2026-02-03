@@ -3,14 +3,18 @@ title: Orchestrator
 description: The routing layer that coordinates context gathering and test generation.
 ---
 
-The orchestrator is the brain of Raiken. It interprets your prompts, decides what context to gather, and coordinates the test generation pipeline.
+The orchestrator is the brain of Raiken. It interprets your prompts, decides what context to gather, and coordinates a deterministic LangGraph flow. All actions are executed through tools (no free-form execution), which keeps behavior consistent and auditable.
 
 ## What it does
 
-1. **Classifies intent** — Determines if you want to generate tests, ask a question, or refine previous output
-2. **Gathers context** — Fetches relevant code and DOM data based on your request
-3. **Routes to the right tool** — Decides whether to capture DOM, search code, or generate tests
-4. **Streams the response** — Sends output back to the dashboard in real-time
+1. **Classifies intent** — Determines explore vs test generation
+2. **Navigates to the target** — Opens the requested URL when needed
+3. **Detects interruptions** — Auth, OTP, captcha, consent, paywalls, errors
+4. **Resolves or pauses** — Auto-resolves low-risk steps or waits for `awaitUser`
+5. **Explores and captures DOM** — Collects UI context for grounded actions
+6. **Generates tests on request** — Tests are created only when explicitly asked
+7. **HITL gates** — Save/run actions require approval by default
+8. **Summarizes results** — Pages visited and outcomes are reported back
 
 ## Routing decisions
 
@@ -27,9 +31,9 @@ The orchestrator makes smart decisions about what context is needed:
 
 When you send a prompt, the orchestrator classifies it:
 
-- **test-generation** — You want to create or modify tests
-- **chat** — You're asking a question or having a conversation
-- **help** — You need guidance on how to use Raiken
+- **explore** — Navigate and capture UI context
+- **test-generation** — Create or modify tests
+- **chat/help** — Answer questions or explain usage
 
 It also detects meta-intents like "retry", "continue", or "cancel".
 
@@ -73,6 +77,14 @@ The orchestrator maintains context across turns in a conversation:
 - **URL** — The page being tested
 
 This allows follow-up prompts like "add error cases" or "also test the logout button" to work without re-explaining the context.
+
+## Interruption handling
+
+If an interruption is detected, the orchestrator:
+
+1. Attempts safe, deterministic resolutions (like closing a consent banner)
+2. Pauses with `awaitUser` when input is required (OTP, auth, paywalls)
+3. Resumes execution once the user responds
 
 ## Error handling
 
