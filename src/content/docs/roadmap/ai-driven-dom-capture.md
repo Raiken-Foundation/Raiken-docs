@@ -308,11 +308,11 @@ Playwright's `storageState` captures cookies, localStorage, sessionStorage.
 
 ```ts
 // Capture auth state (separate command)
-await context.storageState({ path: '.raiken/auth.json' });
+await context.storageState({ path: '.raiken/auth-state.json' });
 
 // Reuse auth state
 const context = await browser.newContext({
-  storageState: '.raiken/auth.json',
+  storageState: '.raiken/auth-state.json',
 });
 ```
 
@@ -320,7 +320,7 @@ const context = await browser.newContext({
 
 1. User runs `raiken auth --url http://localhost:3000/login`
 2. Browser opens, user logs in manually
-3. Auth state saved to `.raiken/auth.json`
+3. Auth state saved to `.raiken/auth-state.json`
 4. All subsequent captures use this auth state
 5. User already logged in when navigation starts
 

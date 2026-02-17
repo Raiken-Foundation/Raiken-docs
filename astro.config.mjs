@@ -73,6 +73,7 @@ export default defineConfig({
             { label: 'Orchestrator', slug: 'orchestrator' },
             { label: 'Code Graph', slug: 'code-graph' },
             { label: 'DOM Capture', slug: 'dom-capture' },
+            { label: 'Site Discovery', slug: 'site-discovery' },
             { label: 'Test Generation', slug: 'test-generation' },
           ],
         },

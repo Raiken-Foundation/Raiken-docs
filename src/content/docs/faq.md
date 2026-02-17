@@ -21,6 +21,22 @@ model.
 
 Use Playwright storage state and set `storageStatePath` in your config.
 
+For discovery flows, you can also run `raiken discover --auth` to capture auth
+state before discovery starts.
+
+## Can discovery pause and continue?
+
+Yes. Discovery supports pause/continue semantics using persisted session metadata
+and queue snapshots for best-effort continuation.
+
+## What do link statuses mean in discovery?
+
+Discovery classifies links based on observed outcomes:
+
+- `verified` — target navigation succeeded
+- `broken` — navigation failed
+- `auth_required` — access blocked by auth (for example `401`/`403`)
+
 ## How do I reset state?
 
 Delete the `.raiken/` directory and run `raiken init` again.

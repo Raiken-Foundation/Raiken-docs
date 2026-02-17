@@ -38,6 +38,20 @@ If project structure changed significantly:
 
 - Delete `.raiken/` and run `raiken init` again
 
+## Discovery paused on authentication
+
+If discovery enters a paused/auth-blocked state:
+
+1. Capture auth state (`raiken auth` or `raiken discover --auth`)
+2. Continue discovery (`raiken discover --continue`)
+3. Confirm runtime phase changes from `paused` to `running` in the dashboard
+
+## Discovery timeout or incomplete crawl
+
+- Increase timeout via CLI: `raiken discover --timeout 60000`
+- Or set project defaults in `raiken.config.json` under `discovery`
+- Check `excludePatterns` and `maxDepth` if expected pages are missing
+
 ## Example error output
 
 ```text title="Error Log"
@@ -49,6 +63,8 @@ ERROR: Failed to connect to http://localhost:7101 (connection refused).
 
 | Check | Status |
 | --- | --- |
-| API key configured | Pending |
-| Dev server running | Pending |
-| Playwright browsers installed | Pending |
+| API key configured | Confirmed |
+| Dev server running | Confirmed |
+| Playwright browsers installed | Confirmed |
+| Auth state captured (if needed) | Confirmed |
+| Discovery runtime phase healthy | Confirmed |

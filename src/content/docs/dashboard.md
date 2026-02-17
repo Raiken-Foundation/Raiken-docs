@@ -69,6 +69,18 @@ After generation:
 3. **Retry** — Refine your prompt and regenerate
 4. **Save** — Save to your project's test directory
 
+### Discovery runtime panel
+
+The dashboard includes a dedicated discovery workflow with:
+
+- Start, continue, auth-assist, and clear actions
+- Runtime phase visibility (`idle`, `running`, `paused`, `completed`, `error`)
+- Session metadata (current URL/depth, counters, blockers)
+- Event timeline (started, continued, page discovered, auth blocked, completed, error)
+- Discovered pages and unresolved blockers tables
+
+Polling adapts by runtime phase to balance responsiveness and overhead.
+
 ## Workflow
 
 ### 1. Start the dashboard
@@ -108,6 +120,14 @@ Once saved, run tests with your usual workflow:
 ```bash title="Terminal"
 npx playwright test
 ```
+
+## Discovery workflow
+
+1. Open the Discovery view in the dashboard.
+2. Start discovery for a target URL.
+3. If auth is required, run auth-assist and continue.
+4. Monitor runtime/timeline until completed.
+5. Review discovered pages and blocker outcomes.
 
 ## Tips
 

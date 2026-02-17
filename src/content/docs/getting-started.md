@@ -3,7 +3,7 @@ title: Getting Started
 description: Install Raiken and generate your first test.
 ---
 
-This guide walks through installing Raiken and generating your first test.
+This guide walks through installing Raiken, running discovery, and generating your first test.
 
 :::note[Quickstart]
 ```bash title="Terminal"
@@ -116,6 +116,13 @@ The dashboard runs at:
 http://localhost:7101
 ```
 
+## Run your first discovery
+
+1. Open the dashboard.
+2. Start discovery for your app URL.
+3. If auth is needed, run auth-assist and continue.
+4. Review discovered pages and link outcomes.
+
 ## Generate your first test
 
 1. Open the dashboard.
@@ -127,4 +134,5 @@ http://localhost:7101
 
 - [Configuration](/configuration/)
 - [CLI commands](/cli/)
+- [Site Discovery](/site-discovery/)
 - [DOM capture](/dom-capture/)

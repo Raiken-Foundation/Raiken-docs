@@ -11,10 +11,9 @@ This section explains the main ideas that power Raiken.
 | --- | --- | --- |
 | Code graph | Structural context for prompts | `.raiken/raiken.db` |
 | DOM capture | UI context and selectors | `.raiken/` cache |
+| Site discovery | Stateful crawl runtime and link outcomes | `.raiken/raiken.db` |
 | Orchestrator | Routes the right tools | CLI process |
 | Test generation | Produces test files | `tests/` directory |
-
-![Concept map preview](/placeholder-diagram.svg)
 
 ## Code graph
 
@@ -41,6 +40,12 @@ The orchestrator decides which tools to call:
 - test generation for output
 
 This routing keeps the agent focused on the right context for each request.
+
+## Site discovery
+
+Site discovery runs as a stateful runtime with pause/continue behavior and
+auth-aware recovery. It persists runtime metadata and queue snapshots to improve
+continuity across interruptions.
 
 ## Local state
 

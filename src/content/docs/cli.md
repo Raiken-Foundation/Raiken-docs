@@ -25,11 +25,12 @@ raiken init
 
 1. Detects your project type and test framework
 2. Creates `.raiken/` workspace directory
-3. Writes `raiken.config.json`
-4. Creates `test-results/` and `test-reports/` directories
-5. Optionally generates `playwright.config.ts`
-6. Optionally creates an example test file
-7. Adds scripts to `package.json`
+3. Ensures crawler artifact paths are ignored (`.raiken/`, `storage/`)
+4. Writes `raiken.config.json`
+5. Creates `test-results/` and `test-reports/` directories
+6. Optionally generates `playwright.config.ts`
+7. Optionally creates an example test file
+8. Adds scripts to `package.json`
 
 **Example output:**
 
@@ -98,12 +99,57 @@ raiken start -p 8080
 🚀 Raiken UI running at http://localhost:7101
 ```
 
+### raiken discover
+
+Start site discovery for a target application.
+
+```bash title="Terminal"
+raiken discover --url http://localhost:3000
+```
+
+Common options:
+
+| Flag | Description |
+| --- | --- |
+| `--timeout <number>` | Override discovery timeout for this run |
+| `--auth` | Capture auth state before starting discovery |
+| `--continue` | Continue the active paused discovery session |
+
+Discovery defaults can be provided in `raiken.config.json` under `discovery`.
+CLI flags override config values at runtime.
+
+Continuation behavior reuses active session metadata (including persisted limits)
+when available.
+
+### raiken auth
+
+Capture auth state for protected routes.
+
+```bash title="Terminal"
+raiken auth
+```
+
+The auth command stores state in `.raiken/auth-state.json` and is used by discovery
+resume flows for authenticated navigation.
+
+If runtime Playwright dependencies are missing, Raiken fails fast with install
+guidance rather than continuing with partial auth flow behavior.
+
 ## API surface (local)
 
 The CLI exposes a small local API used by the dashboard:
 
 - `POST /api/generate-test` — SSE stream for exploration and test generation output
 - `POST /api/trpc/*` — tRPC router for dashboard actions
+
+Discovery runtime endpoints are exposed through tRPC procedures, including:
+
+- `startDiscovery`
+- `continueDiscovery`
+- `getDiscoveryRuntime`
+- `getDiscoveryTimeline`
+- `authAssist`
+- `clearDiscoveryData`
 
 ## Environment variables
 
@@ -136,6 +182,12 @@ raiken start
 
 # Start on a custom port
 raiken start -p 8080
+
+# Start discovery
+raiken discover --url http://localhost:3000
+
+# Continue paused discovery
+raiken discover --continue
 
 # Check version
 raiken --version

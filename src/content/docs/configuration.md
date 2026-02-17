@@ -13,6 +13,7 @@ Raiken supports high-level configuration for:
 - Browser settings (engine, headless, timeouts, retries)
 - Feature flags (screenshots, video, tracing, network capture)
 - Autonomy controls for save/run behavior (when enabled)
+- Discovery runtime defaults (limits, timeout, auth pause behavior)
 
 ## Full configuration
 
@@ -39,6 +40,14 @@ Raiken supports high-level configuration for:
     "headless": true,
     "timeout": 30000,
     "retries": 1
+  },
+  "discovery": {
+    "maxPages": 100,
+    "maxDepth": 4,
+    "maxConcurrency": 3,
+    "timeout": 30000,
+    "excludePatterns": [],
+    "pauseOnAuth": true
   }
 }
 ```
@@ -92,6 +101,22 @@ Most fields have sensible defaults. A minimal config looks like:
 | `browser.timeout` | `30000` | Default timeout in milliseconds |
 | `browser.retries` | `1` | Number of test retries |
 
+### Discovery settings
+
+| Field | Default | Description |
+| --- | --- | --- |
+| `discovery.maxPages` | `100` | Maximum pages to process in one run |
+| `discovery.maxDepth` | `4` | Maximum crawl depth from the start URL |
+| `discovery.maxConcurrency` | `3` | Number of concurrent discovery workers |
+| `discovery.timeout` | `30000` | Per-request timeout in milliseconds |
+| `discovery.excludePatterns` | `[]` | URL patterns to skip during discovery |
+| `discovery.pauseOnAuth` | `true` | Pause runtime on auth blockers and wait for assist |
+
+## Precedence rules
+
+Discovery command-line options override project-level `discovery` config values
+for the current invocation.
+
 ## Environment variables
 
 Set your API key in `.env` rather than the config file:
@@ -115,11 +140,13 @@ Raiken creates a `.raiken/` directory containing:
 
 - `raiken.db` — SQLite database with code graph and embeddings
 - `cache/` — Analysis cache
+- `auth-state.json` — Captured auth state for protected discovery/test routes
 
 Add this to your `.gitignore`:
 
 ```gitignore
 .raiken/
+storage/
 ```
 
 ## Test artifacts
@@ -135,7 +162,7 @@ For apps that require login, capture a Playwright storage state and reference it
 
 ```json title="raiken.config.json"
 {
-  "storageStatePath": ".raiken/auth.json"
+  "storageStatePath": ".raiken/auth-state.json"
 }
 ```
 

@@ -78,7 +78,8 @@ SELECTOR PRIORITY:
 ──────────────────
 1. getByRole() - Most reliable, matches accessibility tree
 2. getByLabel() - Great for form inputs
-3. getByText() - For buttons and links
+3. getByTestId() - Reliable explicit test selectors
+4. getByText() - For unique visible text
 ```
 
 This structured format helps the AI generate tests with stable, accessible selectors.
@@ -103,11 +104,13 @@ For pages that require login, set up Playwright storage state:
 
 ```json title="raiken.config.json"
 {
-  "storageStatePath": ".raiken/auth.json"
+  "storageStatePath": ".raiken/auth-state.json"
 }
 ```
 
-Raiken will reuse this session when capturing DOM context. See [Configuration](/configuration/) for details.
+Raiken will reuse this session when capturing DOM context. By default `raiken auth`
+writes `.raiken/auth-state.json`, but `storageStatePath` can point to any valid
+Playwright storage-state file. See [Configuration](/configuration/) for details.
 
 ## Limitations
 
